@@ -1,0 +1,23 @@
+.app-center{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid red;
+}
+
+.center{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+}
+
+.fn{
+    gap: 10px;
+}

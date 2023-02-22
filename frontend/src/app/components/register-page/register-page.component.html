@@ -1,0 +1,72 @@
+<div class="app-center">
+  <div class="center">
+    <mat-card class="flex flex-row">
+      <img class="logo" src="../../../assets/logo.png" alt="">
+      <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="fn flex">
+            <mat-form-field appearance="outline">
+              <mat-label>Firstname</mat-label>
+              <input
+                matInput
+                type="text"
+                placeholder="Firstname your email here"
+                formControlName="firstname"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Lastname</mat-label>
+              <input
+                matInput
+                type="text"
+                placeholder="Lastname your password here"
+                formControlName="lastname"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input
+              matInput
+              type="email"
+              placeholder="Enter your email here"
+              formControlName="email"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Enter your password here"
+              formControlName="password"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Confirm your password"
+              required
+            />
+          </mat-form-field>
+          <button mat-flat-button color="submit-button" type="submit">Sign In</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<footer>
+  <p class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Phumlani Arendse</a>.
+  </p>
+</footer>

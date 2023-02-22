@@ -1,0 +1,26 @@
+<button mat-raised-button color="primary" (click)="logout()">
+  Logout
+</button>
+
+
+<div>
+<!--  <p *ngFor="let item of data">-->
+<!--    {{ item.firstname }}-->
+<!--  </p>-->
+
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Username</th>
+    </tr>
+    <tr *ngFor="let item of data">
+      <td>{{ item.firstname }}</td>
+      <td>{{ item.lastname }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.role }}</td>
+    </tr>
+  </table>
+</div>
+
