@@ -1,0 +1,159 @@
+.app{
+  width: 100%;
+  height: 100%;
+  /* background-image: url("../../assets/bg-intro-desktop.png"); */
+  background-color: rgba(255,121,120, 0.7);
+  position: absolute;
+  padding: 6%;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.hero_1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4%;
+}
+
+.title h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.1;
+  color: white;
+}
+
+.description{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  color:whitesmoke;
+}
+
+.hero_2{
+  width: 50%;
+  height: 100%;
+  
+}
+
+.trial{
+  background-color: #5C54A2;
+  text-align: center;
+  height: 8%;
+  border-radius: 5px;
+  padding: 1% 0;
+  margin-bottom: 3%;
+  box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.25);
+}
+
+.bold{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: small;
+  color:whitesmoke;
+}
+
+.bold .price{
+  color: lightgray;
+}
+
+form{
+  width: 100%;
+  height: 92%;
+  border-radius: 5px;
+}
+
+.sign_up{
+  background-color: white;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.input{
+  margin-top: 3%;
+  height: 50px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+button{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  color:whitesmoke;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50px;
+  background-color: rgb(55,205,138);
+  border-radius: 5px;
+  padding:3% 5%;
+  border:none;
+}
+
+small{
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: grey;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: small;
+  text-align: center;
+}
+
+.to_login{
+  color: blue;
+  cursor: pointer;
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .app{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero_1{
+    width: 100%;
+  }
+
+  .hero_2{
+    width: 100%;
+  }
+
+  .trial{
+    margin-top: 5%;
+  }
+  
+  }
+  

@@ -2,10 +2,9 @@ package com.macgyver.auth.authenticate;
 
 import com.macgyver.auth.configuration.JwtService;
 import com.macgyver.auth.exceptions.EmailAlreadyExist;
-import com.macgyver.auth.exceptions.EmptyFields;
 import com.macgyver.auth.user.Role;
 import com.macgyver.auth.user.User;
-import com.macgyver.auth.user.UserRepository;
+import com.macgyver.auth.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,7 +21,7 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationResponse register(RegisterRequest request) throws EmailAlreadyExist, EmptyFields {
+    public AuthenticationResponse register(RegisterRequest request) throws EmailAlreadyExist {
 
         Optional<User> existingUser = repository.findByEmail(request.getEmail());
         if (existingUser.isPresent()){
@@ -34,7 +33,7 @@ public class AuthenticationService {
                 .lastname(request.getLastname())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.USER)
+                .role(Role.ADMIN)
                 .build();
         repository.save(user);
         var jwtToken = jwtService.generateToken(user);

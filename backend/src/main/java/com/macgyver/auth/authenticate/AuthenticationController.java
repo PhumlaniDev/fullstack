@@ -2,6 +2,7 @@ package com.macgyver.auth.authenticate;
 
 import com.macgyver.auth.exceptions.EmailAlreadyExist;
 import com.macgyver.auth.exceptions.EmptyFields;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -17,7 +18,7 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
-            @RequestBody RegisterRequest request
+            @RequestBody @Valid RegisterRequest request
     ) throws EmailAlreadyExist, EmptyFields {
         return ResponseEntity.ok(service.register(request));
     }
